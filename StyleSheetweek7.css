@@ -1,0 +1,46 @@
+﻿/* ==============================
+   Part 1: CSS Animations & Transitions
+   ============================== */
+
+/* Button hover effect */
+.btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #2980b9;
+  transform: scale(1.1);
+}
+
+/* Box (will be animated with JS + CSS) */
+.box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  margin-top: 20px;
+  opacity: 0;
+}
+
+/* Fade + Slide animation using keyframes */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.show {
+  animation: fadeSlide 1s ease forwards;
+}
